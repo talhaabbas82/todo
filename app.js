@@ -2,10 +2,15 @@ function addTodo(){
     let todotext = document.getElementById("text").value;
     let result = document.getElementById("result");
     
+   if(todotext === ""){
+    alert("please fill the task");
+    return;
+   }   
    
     let ul = document.createElement("ul");
     let li = document.createElement("li");
     let text = document.createTextNode(todotext);
+    
 
     let editBtn = document.createElement("button");
     let buttonText = document.createTextNode("edit");
@@ -31,7 +36,6 @@ function addTodo(){
 
    
     
-
     
     li.appendChild(text);
     ul.appendChild(li);  
@@ -41,7 +45,7 @@ function addTodo(){
 
 
     
-
+      document.getElementById("text").value = "";
 
 }
   
